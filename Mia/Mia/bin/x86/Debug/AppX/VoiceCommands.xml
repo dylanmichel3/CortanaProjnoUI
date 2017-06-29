@@ -1,0 +1,827 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2" >
+  <CommandSet xml:lang="en-us" Name="MyTechCommands">          
+    <CommandPrefix> MyTech </CommandPrefix>
+
+    <Example> Open MyTech </Example>
+
+<!--   ===========================================================  Commands ======================================================================================================================   -->   
+    
+      
+  <!-- =========================================================== Laurie easter egg  ======================================================================================================================   -->  
+ <Command Name="laurie">                                                          <!-- Name of the command goes here                                -->
+      <Example> Open MyTech </Example>                                            <!--Examples are required and they are displayed                  -->
+
+      <ListenFor> I need help with my incident </ListenFor>                       <!--Specific wording that cortana listens for                    -->
+
+
+      <Feedback> I know the right person for that! </Feedback>                    <!-- What cortana says after matching a the listenfor             -->
+
+      <Navigate/>                      <!-- All cortana attributes and elements >>>>> https://docs.microsoft.com/en-us/uwp/schemas/voicecommands/voice-command-elements-and-attributes-1-2 <<<<< -->
+    </Command>
+    
+    <!--   ====================================================== Google Search  ======================================================================================================================   -->
+
+    <Command Name="google">
+      <Example> Google photoshop </Example>
+
+      <ListenFor> Google {source} </ListenFor>
+
+
+      <Feedback> Searching for {source} </Feedback>
+
+      <Navigate/>
+    </Command>
+
+    <!--   ======================================================= GE Search ==========================================================================================================   -->
+      
+    <Command Name="search">
+      <Example> search for Dave Chapman </Example>
+
+      <ListenFor> search for {source} </ListenFor>
+
+
+      <Feedback> Searching GE's database for {source} </Feedback>
+
+      <Navigate/>
+    </Command>
+    
+    
+      <!--   ===================================================== Redirect to MyTech ==========================================================================================================   -->
+
+    <Command Name="redirect">
+      <Example> Source </Example>
+
+      <ListenFor>[How][Where][Can][I][I'd][want][Would][like][Can you][need][like][can't][to][get][me][my][a][an] {source} </ListenFor>
+      <ListenFor>[Please][Find][Buy][order][I][Open][Bring][Show][up][me] {source}</ListenFor>
+
+      <Feedback> Taking you to MyTech  </Feedback>
+
+      <Navigate/>
+    </Command>
+    
+    
+      <!--   ===================================================== Opens MyTech ==========================================================================================================   -->
+    
+    <Command Name="openMyTech">
+      <Example> Open MyTech </Example>
+
+      <ListenFor> [I want to][Where can I][Would like to][Can I][Can you][May I][I need to][I demand to][see][the] {homepage}  </ListenFor>
+      <ListenFor> [Can I][Show me][Bring up][Open up][Take me to][I want to][Pop up][Display][Demonstrate][see][the] {homepage}</ListenFor>
+      <ListenFor> [Launch][Commence][Begin][Initiate][Start][Start up][Kickoff][Jump-start][Whip up][What is] {homepage} </ListenFor>
+      <ListenFor> [Bring me][Direct me][Go][Navigate][Guide me][Send me][transfer me][Get][go] to {homepage} </ListenFor>
+      <ListenFor> [Show][Open][Take me to][What's][View][Fire][the] My tech {homepage}[please] </ListenFor>
+      <ListenFor> [Can][you][I][want][Take][to][go][see][Open][Pull][Bring][me][up][the] {homepage} [please]</ListenFor>
+      <ListenFor> [I want to][Show][Open][Take me to][Display][View][Fire][Bring up][Show me][the] {homepage} [please] </ListenFor>
+
+      <Feedback> Commencing Self Destruct.. Nah Justkidding. Opening MyTech </Feedback>
+
+      <Navigate/>
+    </Command>
+    
+     <!--   ===================================================== Opens the Helpdesk page ==========================================================================================================   -->
+    
+    <Command Name="helpdesk">
+      <Example> Take me to the helpdesk</Example>
+
+      <ListenFor> [I want to][Where can I][Would like to][Can I][Can you][May I][I need to][I demand to][see][the] {help}  </ListenFor>
+      <ListenFor> [Can I][Show me][Bring up][Open up][Take me to][I want to][Pop up][Display][Demonstrate][see][the] {help}</ListenFor>
+      <ListenFor> [Launch][Commence][Begin][Initiate][Start][Start up][Kickoff][Jump-start][Whip up][What is] {help} </ListenFor>
+      <ListenFor> [Bring me][Direct me][Go][Navigate][Guide me][Send me][transfer me][Get][go] {help} </ListenFor>
+      <ListenFor> [Show][Open][Take me to][What's][View][Fire][the] My tech {help}[please] </ListenFor>
+      <ListenFor> {source} [open] [the] {help}</ListenFor>
+      <ListenFor> [I want to][Show][Open][Take me to][Display][View][Fire][Bring up][Show me][the] {help} [please] </ListenFor>
+
+      <Feedback> Taking you to the Helpdesk </Feedback>
+
+      <Navigate/>
+    </Command>
+      
+      
+    <!--   ====================================================== Request E-mail ==========================================================================================================   -->
+    
+    
+    
+     <Command Name="email">
+      <Example> I need mobile email </Example>
+
+      <ListenFor> [Show][me][Where][how][to][do][can][show][me][I][need][have][want][to][get][request][GE][mobile][email][on][my]{mobileR} </ListenFor>
+     <ListenFor> [Show][me][Where][how][to][do][can][show][I][need][have][want][to][get][subscribe][GE][mobile][email][on][my]{mobileR} </ListenFor>
+     <ListenFor>  I[want] need [GE] email on my {mobileR} </ListenFor>
+       <ListenFor> [I][don't][How][to][can][do][I][get][my][work][GE][email][on][my] {mobileR} {source}</ListenFor>
+        <ListenFor> [How][do][can][Could][you][show][me][I][don't][How][to][can][do][I][get][my][work][GE][email][on][my] {mobileR} {source}</ListenFor>
+        <ListenFor> [How][do][can][Could][you][show][me][I][don't][How][to][can][do][I][get][my][work][subsribe][to][GE][email][on][my] {mobileR} </ListenFor>
+      <ListenFor> I[want] need email on my {mobileR} </ListenFor>
+       <ListenFor> [How][do][can][I][dont][can't][know][how][to][my][setup][get][put][downlod][mobile][email][on][my]{mobileR}</ListenFor>
+    <ListenFor> [I][dont][know][how][to][do][can][show][I][need][have][to][request][get][subscribe][GE][mobile][email][on][my]{mobileR} </ListenFor>
+
+
+
+      <Feedback> Lets subscribe to GE E-mail </Feedback>
+
+      <Navigate/>
+    </Command>
+
+    <!--   ====================================================== Request audio or video conferencing accounts ==========================================================================================================   -->
+    <Command Name="requestConferencing">
+      <Example> Request an Accessory </Example>
+
+     
+      <ListenFor> [Open][launch][Can I see][Show me][Bring up][Open up][Take me to][Pop up][Display][I need to see] {conferencing}  </ListenFor>
+     
+      <ListenFor> [Can][you][show][me][Where][How][do][can][I][get][request][make] [a][an] [new] {conferencing}</ListenFor>
+      <ListenFor> [I'd like][I want][I need] [a][an] {conferencing}</ListenFor>
+      <ListenFor> [Show][me][what] {conferencing} [that][do][I][have] </ListenFor>
+      <ListenFor> [Pull up][Open][Show][Take][Bring][up][me][to][where][I][can][get][the][request][order][a][an] {conferencing}</ListenFor>
+      <ListenFor> [I need][I'd like][How do I] [to] [get][order][request] [a][an] {conferencing}</ListenFor>
+
+
+
+      <Feedback> Brining up the conferencing page </Feedback>
+
+      <Navigate/>
+    </Command>
+    
+    
+    <!--   ====================================================== Open page to request connectivity ============================================================================================================   -->
+
+    <Command Name="requestConnectivity ">
+      <Example> I need to download MyApps </Example>
+
+
+      <ListenFor>  {source} {connectivity} </ListenFor>
+     
+      <ListenFor> [Can][you][I][need][want][Would like][Can you][to][request][download][order][me][a][new] {connectivity} </ListenFor>
+      <ListenFor> [Where][How][Can][do][I][get][download][signup][for][a][new] {connectivity} </ListenFor>
+
+      <ListenFor> [I][I'd][want][need][have][would][like] [to][get][request][order][download] [a][an] {connectivity} </ListenFor>
+      <ListenFor> [I][want][need][have][would][like][like] [to][request][download] [a][an][new] {connectivity} </ListenFor>
+      
+
+      
+
+
+      <Feedback> Lets get you connected </Feedback>
+      <Navigate/>
+    </Command>
+      
+<!--   ========================================================== Open Accessories Page ==========================================================================================================   -->
+    <Command Name="openAccessories">
+      <Example> Request an Accessory </Example>
+
+      <ListenFor> [I want to see][Where can I see][Can I see][Can you][May I see][Please][Whip up][I demand to see] request accessories </ListenFor>
+      <ListenFor> [Open][Can I see][Show me][Bring up][Open up][Take me to][Pop up][Display][I need to see][Demonstrate] request accessories </ListenFor>
+      <ListenFor> [Launch][Commence][Begin][Initiate][Start][Start up][Kickoff][Jump-start] request accessories </ListenFor>
+      <ListenFor> [Bring me][Direct me][Go][Navigate][Guide me][Send me][Transfer me][Get][Surf] to request an accessory </ListenFor>
+      <ListenFor> [Can][you][open][pull][up][the] accessories [page] </ListenFor>
+      <ListenFor> [I'd like][I want][I need][I wish] to order an accessory</ListenFor>
+      <ListenFor> [Pull up][Open][Show][Take][Bring][me][to][the] [request][order] accessories [page]</ListenFor>
+      <ListenFor> [I need][I'd like][How do I] [to] [order][request] [a][an] acessories[accessory]</ListenFor>
+
+
+
+      <Feedback> Taking you to the request accessories page </Feedback>
+
+      <Navigate/>
+    </Command>
+
+    <!--========================================================= Request Accessories command ==========================================================================================================   -->
+      
+    <Command Name="requestAccessories">
+      <Example> Request an Accessory </Example>
+
+      <ListenFor> [Where][how][to][do][can][show][me][I][need][have][want][to][see][get][request][order][buy][some][a][an][new] {accessories} </ListenFor>
+      <ListenFor> {source} [request][order][buy][purchase][some][a][an][new] {accessories} </ListenFor>
+      <ListenFor> [I need][Can][you][to][Order][Get][Find][Order][Request][buy][me][some] {accessories} [for me][Please] </ListenFor>
+
+
+
+
+
+      <Feedback> Taking you to request a {accessories}</Feedback>
+
+      <Navigate/>
+    </Command>
+
+    <!--   ====================================================== Open MyTechnology ============================================================================================================   -->
+      
+    <Command Name="openMyTechnology">
+      <Example> Open MyTechnology </Example>
+
+      <ListenFor> [Where][How][May][can][do][I][want][need][have][bring up][to][see][you][show me][Whip up][view] my technology [Please] </ListenFor>
+      <ListenFor> [Can][You][I][see][Open][need][to][see][Show me][Bring up][Open up][Pop up][Display][Demonstrate][Launch] my technology</ListenFor>
+      <ListenFor> [Launch][Commence][Begin][Initiate][Start][Start up][Kickoff][Jump-start] my technology </ListenFor>
+      <ListenFor> [Bring][Direct][Take][Go][Navigate][Guide][Send][Transfer][me][Get][Surf] to my technology </ListenFor>
+      <ListenFor> [I need][I want][to][see] my technology {source} </ListenFor>
+      <ListenFor> [Can][you][I][want][to][see][Show][me][What][the][technology][devices][do] I have</ListenFor>
+      <ListenFor> [Can][you][I][want][to][see][all][Show][me] my [computers][laptops][technology][devices][software]</ListenFor>
+      <ListenFor> [Show][me] [what][the] [stuff][things] [do] I have</ListenFor>
+
+      <Feedback> Showing you your technology </Feedback>
+      <Navigate/>
+    </Command>
+
+      <!--   ====================================================== Open My Teams Technology ============================================================================================================   -->
+      
+    <Command Name="openMyTeamsTechnology">
+      <Example> Open MyTechnology </Example>
+
+      <ListenFor> [Where][How][May][can][do][I][want][need][have][bring up][to][see][you][show me][Whip up][view] {myteam} [Please] </ListenFor>
+      <ListenFor> [Open][Can I see][Show me][Bring up][Open up][Take me to][Pop up][Display][I need to see][Launch] {myteam} [page]</ListenFor>
+      <ListenFor> [Start][Start up][Kickoff] {myteam} </ListenFor>
+      <ListenFor> [Bring][Direct][Take][Go][Navigate][Guide][Send][Transfer][me][Get][Surf] to [see] {myteam}</ListenFor>
+      <ListenFor> [I need][have][to][see] my teams technology {source} </ListenFor>
+      <ListenFor> [Can][I][see][you][Show][me][What][the] {types} [does]{myteam}[have][has] </ListenFor>
+      <ListenFor> {source} {myteam} {types} [does][have][has]</ListenFor>
+      <ListenFor> [Can][you][I][see][Show][me] [what][the] [stuff][things] [does]{myteam} [have]</ListenFor>
+
+      <Feedback> Showing you your teams technology </Feedback>
+      <Navigate/>
+      </Command>
+
+    <!--   ====================================================== Open Manage Phones page ============================================================================================================   -->
+
+    <Command Name="managePhones">
+      <Example> Can I see the phones I have</Example>
+
+      <ListenFor> [Where][How][May][can][do][I][want][need][have][bring up][to][see][you][show me][Whip up][view] my {mobileR}[Please] </ListenFor>
+    
+     
+      <ListenFor> [open][pull][up] manage [my][mobile][phones][devices][communications][page] </ListenFor>
+      <ListenFor> [I][want][to][see][Show][me][What][the][phones][mobile devices][do] I have</ListenFor>
+      <ListenFor> [Can][I][you][want][too][see][Show][me] my [phones][mobile devices][mobiles]</ListenFor>
+      <ListenFor> [Show][me] [what][the] [stuff][things] [do] I have</ListenFor>
+
+      <Feedback> Showing you your mobile devices </Feedback>
+      <Navigate/>
+    </Command>    
+
+    <!--   ====================================================== Open the MyTech guide  ============================================================================================================   -->
+      
+    <Command Name="openMyTechGuide">
+      <Example> Open the MyTech guide </Example>
+
+      <ListenFor> [I want to see][Where can I see][Would like to see][Can I see][Can you][May I see][Please][Whip up] the my tech guide </ListenFor>
+      <ListenFor> [Open][Can I see][Show me][Bring up][Open up][Take me to][Pop up][Display][Demonstrate][Launch] the my tech guide </ListenFor>
+      <ListenFor> [Launch][Commence][Begin][Initiate][Start][Start up][Kickoff][Jump-start] the my tech guide </ListenFor>
+      <ListenFor> [Bring me][Direct me][Go][Navigate][Guide me][Send me][Transfer me][Get][Surf] to the my tech guide </ListenFor>
+      <ListenFor> [show][me][the] mytech guide </ListenFor>
+
+
+      <Feedback> Bringing up the MyTech Guide </Feedback>
+      <Navigate/>
+    </Command>
+
+<!--   ========================================================== Open requests ============================================================================================================   -->
+
+
+    <Command Name="openRequests">
+      <Example> Open my requests </Example>
+
+      <ListenFor> [Look for][I want to][Where can I][Would like to][Can I][Can you][May I][Please][Whip up][my] requests [page]</ListenFor>
+      <ListenFor> [Open][Can I see][Show me][Bring up][Open up][Take me to][Pop up][Display][Demonstrate][Launch][my] requests </ListenFor>
+      <ListenFor> [Find][What are][Launch][List][Commence][Begin][Initiate][Start][Start up][Kickoff][Jump-start][my] requests </ListenFor>
+      <ListenFor> [Bring me][Direct me][Go][Navigate][Guide me][Send me][find me][Get][Surf][to][my] requests </ListenFor>
+      <ListenFor> What {requests} do I have </ListenFor>
+      <ListenFor> [What stuff][What things][What devices][what software] did [do] I [have] [requested] request[?]</ListenFor>
+      <ListenFor> What [stuff][things][have][did] I [requested][ordered][buy][bought]</ListenFor>
+      <ListenFor> [Can][I][want][need][to][Show][me][the][status][of][my] {requests} </ListenFor>
+      <ListenFor> [I want][to][bring up][open][see][my][list][of] requests </ListenFor>
+
+
+      <Feedback> Lets see your requests </Feedback>
+      <Navigate/>
+    </Command>
+    
+    <!--   ====================================================== Open the refresh computer device page ============================================================================================================   -->
+
+    <Command Name="openPCRefresh">
+      <Example> Open my refresh page </Example>
+
+      <ListenFor> [How can I][I need to][I want to] [refresh][upgrade] my {pc} </ListenFor>
+      <ListenFor> [Im due for][Am I eligible for][Take me][I need][I want] [to][a] refresh  </ListenFor>
+      <ListenFor> [How][do I][I want][Can I make][I need][make] an upgrade </ListenFor>
+      <ListenFor> [How][Where][When][do I][I want to][I need to][Can I] upgrade my {pc}</ListenFor>
+      <ListenFor> Can you [tell me][Show me] what I can refresh </ListenFor>
+      <ListenFor> What stuff can I [refresh][upgrade]</ListenFor>
+      <ListenFor> Show me what stuff I can refresh </ListenFor>
+      <ListenFor> {pc} [refresh][upgrade] </ListenFor>
+      <ListenFor> [How can I][I need to][I want to] [refresh][upgrade] my {pc} </ListenFor>
+      <ListenFor> [What if][My] {pc} is due for a [refresh][upgrade]  </ListenFor>
+
+
+      <Feedback> If you're going to refresh/upgrade just choose any eligible device </Feedback>
+      <Navigate/>
+    </Command>
+    
+     <!--   ====================================================== Open the refresh mobile device page ============================================================================================================   -->
+
+    <Command Name="openMobileRefresh">
+      <Example> Open my refresh page </Example>
+
+      <ListenFor> [How can I][I need to][I want to] [refresh][upgrade] my {mobileR} </ListenFor>
+      <ListenFor> [How][Where][When][do I][I want to][I need to][Can I] upgrade my {mobileR}</ListenFor>
+      <ListenFor> Can you [tell me][Show me] what I can refresh </ListenFor>
+      <ListenFor> {mobileR} [refresh][upgrade] </ListenFor>
+      <ListenFor> [How can I][I need to][I want to] [refresh][upgrade] my {mobileR} </ListenFor>
+      <ListenFor> [What if][My] {mobileR} is due for a [refresh][upgrade]  </ListenFor>
+
+
+      <Feedback> If you're going to refresh/upgrade just choose any eligible device </Feedback>
+      <Navigate/>
+    </Command>
+    
+    <!--   ====================================================== Open page to request a computer  ============================================================================================================   -->
+
+    <Command Name="openComputerReq">
+      <Example> I want to request a PC</Example>
+
+      <ListenFor> {source} [new] {pc} </ListenFor>
+      <ListenFor> {source} [new] {pc} {source} </ListenFor>
+      <ListenFor> [Can][you][I][need][want][Would like][Can you][to][request][order][me][a][new] {pc} </ListenFor>
+      <ListenFor> [Can I][How do I][Where can I][I'm trying to][get][my][a][new]{pc} </ListenFor>
+
+      <ListenFor> [I want][I need][I have][I would like][I'd like][I'm trying] to request a {pc} </ListenFor>
+      <ListenFor> [I want][I need][I have][I would like][I'd like][I'm trying] to request a new {pc} </ListenFor>
+      <ListenFor> [I][I'd][have][want][need][would][like][I'm trying][to][get][request][order][a][new] {pc}{source} </ListenFor>
+
+      <ListenFor> What {pc} options do I have </ListenFor>
+
+
+      <Feedback> I'll take you to request a {pc} </Feedback>
+      <Navigate/>
+    </Command>
+
+     <!--  ====================================================== Open page to request a mobile device  ============================================================================================================   -->
+
+
+    <Command Name="requestPhone">
+      <Example> I want to request a mobile phone </Example>
+
+      <ListenFor> [How][Where][can][do][I][I'm][trying][want][need][Would][like][to][get][request][order][buy][puchase] [a][an][new] {mobileR} </ListenFor>
+      <ListenFor> [How][Where][do][I][want][Would][like][need][have][to] [order][request][buy][get][a][new] charger [for][the][my]{mobileR} </ListenFor>
+      <ListenFor> [How][Where][do][I][want][Would][like][need][have][to] [order][request][buy][get][a][new] {mobileR} charger  </ListenFor>
+      <ListenFor> [How][Where][can][do][I][I'm][trying][want][need][Would][like][to][get][request][order][buy][puchase] [a][an][new] {mobileR} </ListenFor>
+      <ListenFor> [How][Where][can][do] I get [some][a][an] {mobileR} </ListenFor>
+      <ListenFor> {source} [request][order][purchase] [a][an][the] {mobileR}</ListenFor>
+      <ListenFor> I want a new {mobileR}</ListenFor>
+
+      <Feedback> I'll take you to request a {mobileR} </Feedback>
+      <Navigate/>
+    </Command>
+
+
+    <!--  ====================================================== Open page to add or Remove phone features  ============================================================================================================   -->
+
+
+    <Command Name="phoneFeatures">
+      <Example> I want change my phone plan </Example>
+
+      <ListenFor> [How][Where][can][do][I][I'm][trying][want][need][Would][like][to][add][put][remove][features][on][for][my]{mobileR} </ListenFor>
+      <ListenFor> [How][Where][can][do][I][I'm][trying][want][need][Would][like][to][change][modify] {mobileR} [voice][plan]</ListenFor>
+      
+      <ListenFor> {source}  {mobileR} [data][voice][features][plan]</ListenFor>
+
+      <Feedback> Let's check out your plan </Feedback>
+      <Navigate/>
+    </Command>
+     <!--  ====================================================== Open page to rqport a broken phone  ============================================================================================================   -->
+
+    
+    <Command Name="isBrokenPhone">
+      <Example> My phone broke </Example>
+
+      <ListenFor> [I broke] My {mobileR} [is broken][broke][isn't working][is not working][What should][busted][whack] </ListenFor>
+      <ListenFor> [I][broke][broken][My] {mobileR} [is] [broken][broke][isn't working][not working][slow][bad] </ListenFor>
+      <ListenFor> [What do I do][If][What if][I think][My] {mobileR} [isn't working][is not working] </ListenFor>
+
+
+      <Feedback> I'll help you fix your {mobileR} </Feedback>
+      <Navigate/>
+    </Command>
+
+     <!--  ====================================================== What to do if an accessory is broken(order a new one)  ============================================================================================================  -->
+
+    
+    <Command Name="isBrokenAccessories">
+      <Example> My phone broke </Example>
+
+      <ListenFor> [I][broke][broken][My] {accessories} [is broken][broke][isn't working][is not working] </ListenFor>
+
+
+
+      <Feedback> For that, your gonna have to order a new {accessories}  </Feedback>
+      <Navigate/>
+    </Command>
+
+ <!--   ========================================================= Open page to request a computer  ============================================================================================================  -->
+
+    
+    <Command Name="isBrokenComputer">
+      <Example> My phone broke </Example>
+
+      <ListenFor> [What do I do][If][What if][I think][My] {pc} [is][broken][broke][isn't working][not working][busted][whack]  </ListenFor>
+      <ListenFor> [What do I do][If][What if][I think][My] {pc} [isn't working][is not working][correctly][crashed][is running slow] </ListenFor>
+      <ListenFor> [I][broke][broken][My] {pc} [is broken][broke][isn't][is][not][no][longer][working] </ListenFor>
+      <ListenFor> broken {pc} {*}</ListenFor>
+
+      <Feedback> Don't worry. I'll help you find out how to get your {pc} fixed</Feedback>
+      <Navigate/>
+    </Command>
+    
+  <!--   ======================================================== Open page to report a missing computer   ============================================================================================================   -->
+
+    <Command Name="missingComputer">
+      <Example> My laptop is missing </Example>
+
+      <ListenFor> [Where do][I go][I cant find][What do I do][if][I lost][What if][I think][My][This] {pc} [is][missing][stolen][lost] </ListenFor>
+      <ListenFor> [stolen][lost][missing] {pc} [page] </ListenFor>
+
+
+      <Feedback> Don't worry I'll help with that and soon you'll have a new {pc} </Feedback>
+      <Navigate/>
+    </Command>
+
+ <!--   ========================================================== Open page to report a missing mobile device   ============================================================================================================   -->
+
+
+    <Command Name="missingMobile">
+      <Example> My laptop is missing </Example>
+
+      <ListenFor> [Where do][I go][I cant find][What do I do][if][I lost][What if][I think][My][This] {mobileR} [is][missing][stolen][lost] </ListenFor>
+
+
+      <Feedback> Don't worry I'll help with that and soon you'll have a new {mobileR} </Feedback>
+      <Navigate/>
+    </Command>
+
+     <!--   ====================================================== Open page to re-assign a laptop    ============================================================================================================   -->
+      
+    <Command Name="reassignPC">
+      <Example> I want to reassign my laptop </Example>
+
+      <ListenFor> [How][Where][can][do][I][need to][go to] reassign my {pc} </ListenFor>
+      <ListenFor> [How][Where][can][do][I][need][go][to][get] my {pc} reassigned  </ListenFor>
+      <ListenFor> [Where][can][I][I'd][Would][need][like][have][want][to][get] reassign [my][a] {pc} </ListenFor>
+      <ListenFor> [I][need][want][I've][given][to][reassign][give][gave][my] {pc} to [someone else][another person]</ListenFor>
+
+      <Feedback> I'll show you where to re-assign your {pc} </Feedback>
+      <Navigate/>
+    </Command>
+    
+     <!--   ====================================================== Open page to re-assign a mobile device   ============================================================================================================   -->
+      
+    <Command Name="reassignMobile">
+      <Example> I want to reassign my laptop </Example>
+
+      <ListenFor> [How][Where][can][do][I][need][go][to] reassign my {mobileR} </ListenFor>
+      <ListenFor> [How][Where][can][do][I][need][go][to][get] my {mobileR} reassigned  </ListenFor>
+      <ListenFor> [Where][can][I][I'd][Would][need][like][have][want][to][get] reassign [my][a] {mobileR} </ListenFor>
+      <ListenFor> [I want][I've][given][to][reassign][give][gave][my] {mobileR} to someone else</ListenFor>
+
+      <Feedback> I'll show you how to re-assign your {mobileR} </Feedback>
+      <Navigate/>
+    </Command>
+     <!--  ======================================================= Open page to request software   ==================================================================================================================================================================   -->
+
+    <Command Name="requestSoftware">
+      <Example>Open software requests </Example>
+
+
+      <ListenFor> [I][I'd like][like][need][want][a][to][get][order][request][get][some]{softwareR}</ListenFor>
+      <ListenFor> I need to request {softwareR}</ListenFor>
+      <ListenFor> [Show][me][where][I][Can][Open][bring][up][the][to][get][order][request] software [request][page]</ListenFor>
+      <ListenFor> [Can][I][need][want][a][to][request][order][buy] software {source}</ListenFor>
+
+
+      <Feedback>Bringing up the request software page</Feedback>
+
+      <Navigate/>
+    </Command>
+
+     <!--  ======================================================= Open page to manage software  ==================================================================================================================================================================   -->
+    <Command Name="manageSoftware">
+      <Example> open manage softwares </Example>
+
+      <ListenFor> what software do I have </ListenFor>
+      <ListenFor> {source} [manage][reinstall][check][some][of][my][a]software[licenses] </ListenFor>
+      <ListenFor> I want to manage my software </ListenFor>
+      <ListenFor> [I][need][have][want][would like][to] [transfer][return] {source} license</ListenFor>
+      <ListenFor> [Show][me][my][What][the] {softwareM} {source} </ListenFor>
+      
+
+
+      <Feedback> Bringing up your Software, use the Action dropdown for more</Feedback>
+
+      <Navigate/>
+    </Command>
+
+     <!--  ======================================================= Takes you to discover page   ==================================================================================================================================================================   -->
+    <Command Name="discoverMytech">
+      <Example> What can I do in MyTech? </Example>
+
+      <ListenFor> What can I {discoverT} </ListenFor>
+      <ListenFor> What does mytech {discoverT} </ListenFor>
+      <ListenFor> I want to know more about mytech </ListenFor>
+      <ListenFor> What can mytech do for me </ListenFor>
+      <ListenFor> Discover page</ListenFor>
+
+
+      <Feedback> There's tons to discover! </Feedback>
+      <Navigate/>
+    </Command>
+
+     <!--   ====================================================== Opens the solve common issues page   ==================================================================================================================================================================   -->
+    <Command Name="aQuestion">
+      <Example> I have a question </Example>
+
+      <ListenFor> I have a question </ListenFor>
+      <ListenFor> Help me  </ListenFor>
+      <ListenFor> I need guidance </ListenFor>
+      <ListenFor> What is my tech </ListenFor>
+      <ListenFor> I want to know more </ListenFor>
+
+      <Feedback> There's tons to discover! </Feedback>
+      <Navigate/>
+    </Command>
+
+
+
+    <Command Name="leaderCode">
+      <Example> How do I get a leader code?</Example>
+
+      <ListenFor> [How][do I][get][I want to][Where can I][I][Would like to][Can I][Can you][I'm trying to][request] a leader code </ListenFor>
+      <ListenFor> [Where][do][I][Don't know how][I need][to get][want][to][request] a leader [code][pin] </ListenFor>
+
+      <Feedback> To get a leader code you first need to request an Audio conferencing account </Feedback>
+      <Navigate/>
+    </Command>
+
+     <!--  ======================================================= List of options when requesting a mobile phone  ==================================================================================================================================================================   -->
+      
+    <PhraseList Label="mobileR">
+      <Item> mobile device </Item>
+      <Item> device </Item>
+      <Item> cell phone </Item>
+      <Item> phone </Item>
+      <Item> phones </Item>
+      <Item> mobile  phone </Item>
+      <Item> iPhone </Item>
+      <Item> apple phone </Item>
+      <Item> apple iPhone </Item>
+      <Item> galaxy </Item>
+      <Item> Samsung Galaxy </Item>
+      <Item> Galaxy S7 </Item>
+      <Item> Samsung galaxy S7 </Item>
+      <Item> iPhone 7 </Item>
+      <Item> pixel </Item>
+      <Item> android phone </Item>
+      <Item> Google Pixel </Item>
+      <Item> hotspot </Item>
+      <Item> desk phone </Item>
+      <Item> desk phones </Item>
+      <Item> mobile hotspot </Item>
+      <Item> Mopbil</Item>
+      <Item> iPad </Item>
+      <Item> iPad pro </Item>
+      <Item> sim card </Item>
+      <Item> phone accessories </Item>
+      <Item> phone case </Item>
+      <Item> iPhone case </Item>
+      <Item> phone charger </Item>
+      <Item> iPhone charger </Item>
+      <Item> android </Item>
+      <Item> iPad pro </Item>
+      <Item> charger for my phone</Item>
+      <Item> charger for my iPhone</Item>
+      <Item> charger for my tablet</Item>
+      <Item> charger for my iPad</Item>
+      <Item> charger for android</Item>
+      <Item> charger for my Pixel</Item>
+      <Item> charger for your samsung</Item>
+      <Item> charger for your samsung galaxy</Item>
+      <Item> charger for your galaxy</Item>
+    </PhraseList>
+
+
+
+    <PhraseList Label="softwareR">
+
+      <Item> new software </Item>
+      <Item> new MAC software </Item>
+      <Item> new Windows software </Item>
+      <Item> software for my server </Item>
+      <Item> Windows software </Item>
+      <Item> Mac software </Item>
+      <Item> software </Item>
+      <Item> new software </Item>
+
+
+    </PhraseList>
+
+    <PhraseList Label ="softwareM">
+      <Item> download my software </Item>
+      <Item> install my software </Item>
+      <Item> software </Item>
+    </PhraseList>
+
+    <PhraseList Label ="discoverT">
+
+      <Item> order in mytech </Item>
+      <Item> do in mytech </Item>
+      <Item> use in mytech </Item>
+      <Item> do </Item>
+      <Item> offer </Item>
+
+    </PhraseList>
+
+     <PhraseList Label ="conferencing">
+
+      <Item> video conferencing </Item>
+      <Item> audio conferencing </Item>
+       <Item> conferencing </Item>
+       <Item> conferencing accounts </Item>
+   <Item> video conferencing account</Item>
+      <Item> audio conferencing account</Item>
+        <Item> conferencing account </Item>
+       <Item> video conferencing page</Item>
+      <Item> audio conferencing page </Item>
+       <Item> conferencing page</Item>
+       <Item> WebEx</Item>
+     <Item> WebEx account</Item>
+     
+    </PhraseList>
+    
+    
+    <PhraseList Label ="myteam">
+
+      <Item> my teams technology </Item>
+      <Item> my teams devices </Item>
+      <Item> my teams stuff </Item>
+      <Item> my teams things </Item>
+      <Item> my team</Item>
+      
+
+    </PhraseList>
+
+    <PhraseList Label ="requests">
+
+      <Item> requests </Item>
+      <Item> orders </Item>
+      <Item> purchases </Item>
+      <Item> device </Item>
+      
+
+
+    </PhraseList>
+
+    <PhraseList Label ="homepage">
+
+      <Item> MyTech </Item>
+      <Item> MyTech website </Item>
+      <Item> MyTech site </Item>
+      <Item> MyTech homepage </Item>
+      <Item> home </Item>
+      <Item> homepage </Item>
+      
+
+
+    </PhraseList>
+    
+     <PhraseList Label ="help">
+
+      <Item> helpdesk </Item>
+      <Item> helpdesk page</Item>
+      <Item> help desk</Item>
+      <Item> help desk page</Item>
+      <Item> help desk page website</Item>
+      <Item> find help </Item>
+       <Item> reset my password </Item>
+      <Item> a ticket </Item>
+      <Item> tickets </Item>
+      <Item> issues</Item>
+      <Item> issue</Item>
+
+
+    </PhraseList>
+      
+    <PhraseList Label ="types">
+
+      <Item> technology </Item>
+      <Item> computers</Item>
+      <Item> mobile devices </Item>
+      <Item> phones</Item>
+      <Item> pc </Item>
+      <Item> laptops</Item>
+      <Item> stuff</Item>
+      <Item> things</Item>
+
+    </PhraseList>
+    
+      <PhraseList Label ="connectivity">
+
+      <Item> MyApps </Item>
+      <Item> remote access </Item>
+      <Item> F5 </Item>
+      <Item> F5 VPN</Item>
+      <Item> F5 VPN account</Item>
+      <Item> F5 account </Item>
+      <Item> VPN </Item>
+      <Item> token </Item>
+      <Item> hard token</Item>
+      <Item> soft token</Item>
+      <Item> mobile token </Item>
+      <Item> iPass </Item>
+      <Item> global wi-fi </Item>
+            
+    </PhraseList>
+    
+    <PhraseList Label ="accessories">
+
+      <Item> headset </Item>
+      <Item> Planatronics headset</Item>
+      <Item> Planatronics headphones</Item>
+      <Item> Planatronics noise-cancelling headset</Item>
+      <Item> Planatronics noise-cancelling headphones</Item>
+      <Item> noise cancelling headphones</Item>
+      <Item> noise cancelling headset</Item>
+      <Item> earbuds </Item>
+      <Item> non-standard</Item>
+      <Item> non-standard monitor</Item>
+      <Item> non standard</Item>
+      <Item> non standard monitor</Item>
+      <Item> webacam</Item>
+      <Item> headphones </Item>
+      <Item> charger </Item>
+      <Item> mouse </Item>
+      <Item> adapters </Item>
+      <Item> adapter </Item>
+      <Item> Docking Station </Item>
+      <Item> dock</Item>
+      <Item> bag</Item>
+      <Item> keyboard</Item>
+      <Item> wireless mouse </Item>
+      <Item> wireless keyboard</Item>
+      <Item> monitor </Item>
+      <Item> battery </Item>
+      <Item> printer</Item>
+      <Item> apple </Item>
+      <Item> cable</Item>
+      <Item> PC cable </Item>
+      <Item> HDMI </Item>
+      <Item> Bag </Item>
+      <Item> rolling bag</Item>
+
+    </PhraseList>
+
+    <PhraseList Label ="pc">
+
+      <Item> laptop </Item>
+      <Item> PC </Item>
+      <Item> Dell pc</Item>
+      <Item> Dell laptop</Item>
+      <Item> Dell computer</Item>
+      <Item> HP pc</Item>
+      <Item> HP laptop</Item>
+      <Item> HP computer</Item>
+      <Item> Mac </Item>
+      <Item> Mac computer </Item>
+      <Item> Macbook </Item>
+      <Item> computer </Item>
+      <Item> workstation</Item>
+      <Item> tablet </Item>
+      <Item> machine </Item>
+      <Item> windows surface </Item>
+      <Item> surface</Item>
+      <Item> Surface pro</Item>
+      <Item> desktop</Item>
+      <Item> notebook</Item>
+      <Item> Zbook </Item>
+      <Item> hardware </Item>
+      <Item> tower</Item>
+      <Item> mobile workstation </Item>
+      <Item> all-in-one</Item>
+      <Item> mini computer</Item>
+      <Item> Microsoft surface</Item>
+      <Item> toughbook</Item>
+      <Item> tower</Item>
+
+
+
+    </PhraseList>
+    <!--<PhraseTopic Label = "pc" Scenario = "Dictation">
+    TODO: Figure out what this means and how to use it.
+    NOTE: Was causing COM exception during initialization.
+   
+    
+    </PhraseTopic>-->
+
+
+    <PhraseTopic Label="source" Scenario="Natural Language">
+      <Subject> Natural Language </Subject>
+    </PhraseTopic>
+
+
+  </CommandSet>
+
+</VoiceCommands>
